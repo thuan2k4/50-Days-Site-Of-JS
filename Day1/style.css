@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.image {
+    height: 80vh;
+    width: 9vw;
+    margin: 10px;
+    border-radius: 50px;
+    transition: width 1s ease-in-out;
+    position: relative;
+    /* Khung để phần tử con tham chiếu*/
+}
+
+.active {
+    width: 50vw;
+    transition: width 1s ease-in-out;
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+#img1 {
+    background-image: url(./image/img1.avif);
+}
+
+#img2 {
+    background-image: url(./image/img5.avif);
+}
+
+#img3 {
+    background-image: url(./image/img4.avif);
+}
+
+#img4 {
+    background-image: url(./image/img5.avif);
+}
+
+#img5 {
+    background-image: url(./image/img2.avif);
+}
+
+.image h3 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute; /* Tham chiếu lên phần tử cha (image) */
+    bottom: 10px;
+    left: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.05s;
+}
+
+
+.image.active h3 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.05s;
+}
